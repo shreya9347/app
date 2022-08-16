@@ -16,6 +16,8 @@ def index():
     
     tickers = "AAPL TSLA"
     minRisk, maxReturn = optimizer.optimize(tickers)
-    return render_template('index.html',min=minRisk,Max=maxReturn)
+   
+    key=['Returns', 'Volatility','Sharpe_Ratio','AAP_Weight','TSLA_Weight']
+    return render_template('index.html',data=minRisk,data_1=maxReturn)
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8090)
