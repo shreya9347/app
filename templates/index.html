@@ -1,4 +1,43 @@
-<h1>Minimum</h1>
-{{ min }}
-<h1>Maximum/h1>
-{{Max}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <h1>Minimum</h1>
+        </tr>
+        <tbody>
+            {% for key, value in data.items() %}
+                <tr>
+                    <th scope="row">{{key}}</th>
+                    {% for k, v in value.items() %}
+                        <td>{{v}}</td>
+                    {% endfor %}
+                </tr>
+            {%endfor%}
+        </tbody> 
+    </table>           
+    <table>
+        <h1>Maximum </h1>
+        <tbody>
+            {% for key, value in data_1.items() %}
+                <tr>
+                    <th scope="row">{{key}}</th>
+                    {% for k, v in value.items() %}
+                        <td>{{v}}</td>
+                    {% endfor %}
+                </tr>
+            {%endfor%}
+            
+        </tbody>
+    </table>
+    <img src ="static/plot.png",>
+
+</body>
+</html>
